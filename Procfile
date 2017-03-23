@@ -1,1 +1,0 @@
-worker: python strettobot.py TOKEN
