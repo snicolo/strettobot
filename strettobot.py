@@ -74,9 +74,9 @@ def on_chat_message(msg):
      #tragitti compagnia 2
 
     if msg['text'] in ['Villa S.G. - Tremestieri', 'Caronte da Villa a Tremestieri' ]:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_tremestieri.html')), parse_mode='HTML', reply_markup=None)
+           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_tremestieri.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=None)
     elif msg['text'] in ['Tremestieri - Villa S.G.', 'Caronte da Tremestieri a Villa']:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_tremestieri_villa.html')), parse_mode='HTML', reply_markup=None)
+           bot.sendMessage(chat_id, '\n'.join(file('caronte_tremestieri_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=None)
 
     if msg['text']=='/help':
         bot.sendMessage(chat_id, '\n'.join(file('help.txt')))
