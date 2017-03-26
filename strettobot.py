@@ -83,7 +83,7 @@ def on_chat_message(msg):
 
 #TOKEN 
 
-bot = telepot.Bot('368690827:AAFzYmiq72j0lB4yWDgjJYz0E0Rs_OT1P90')
+bot = telepot.Bot('######')
 print('Listening ...')
 bot.message_loop({'chat': on_chat_message}, run_forever=True)
 
