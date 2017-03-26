@@ -9,7 +9,7 @@ from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboar
 def on_chat_message(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print('Chat Message:', content_type, chat_type, chat_id)
-
+remove_keyboard = {'remove_keyboard': True}
     if msg['text']=='/start':
           bot.sendMessage(chat_id, 'Come vuoi viaggiare?',
                 reply_markup= ReplyKeyboardMarkup(
@@ -74,9 +74,9 @@ def on_chat_message(msg):
      #tragitti compagnia 2
 
     if msg['text'] in ['Villa S.G. - Tremestieri', 'Caronte da Villa a Tremestieri' ]:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_tremestieri.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=None)
+           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_tremestieri.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
     elif msg['text'] in ['Tremestieri - Villa S.G.', 'Caronte da Tremestieri a Villa']:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_tremestieri_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=None)
+           bot.sendMessage(chat_id, '\n'.join(file('caronte_tremestieri_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
 
     if msg['text']=='/help':
         bot.sendMessage(chat_id, '\n'.join(file('help.txt')))
