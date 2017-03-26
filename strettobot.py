@@ -59,9 +59,9 @@ def on_chat_message(msg):
              )
     #tragitti per compagnia 1
     if msg['text'] in ['Messina - Villa S.G.', 'Caronte da Messina a Villa']:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_messina_villa.html')), parse_mode='HTML')
+           bot.sendMessage(chat_id, '\n'.join(file('caronte_messina_villa.html')), parse_mode='HTML', reply_markup=remove_keyboard)
     elif msg['text'] in ['Villa S.G. - Messina', 'Caronte da Villa a Messina']:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_messina.html')), parse_mode='HTML')
+           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_messina.html')), parse_mode='HTML', reply_markup=remove_keyboard)
      
     if msg['text']== 'Bluferries':
            bot.sendMessage(chat_id, 'Scegli la tratta',
