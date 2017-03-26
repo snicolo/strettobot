@@ -1,0 +1,17 @@
+Lista comandi:
+
+/start 
+/caronte
+/aliscafo
+
+Caronte 
+Aliscafo 
+
+Disclaimer:
+Questo bot non è in alcun modo legato ai vettori menzionati in esso, gli stessi non sono responsabili di informazioni non corrette riportate qui.
+Allo stesso tempo lo sviluppatore non si assume la responsabilità per eventuali variazioni negli orari non comunicate.
+
+
+
+
+

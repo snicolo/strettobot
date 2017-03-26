@@ -78,13 +78,15 @@ def on_chat_message(msg):
     elif msg['text'] in ['Tremestieri - Villa S.G.', 'Caronte da Tremestieri a Villa']:
            bot.sendMessage(chat_id, '\n'.join(file('caronte_tremestieri_villa.html')), parse_mode='HTML')
 
+    if msg['text']=='/help':
+        bot.sendMessage(chat_id, '\n'.join(file('help.txt')))
+
 #TOKEN 
 
-bot = telepot.Bot('######')
+bot = telepot.Bot('368690827:AAFzYmiq72j0lB4yWDgjJYz0E0Rs_OT1P90')
 print('Listening ...')
 bot.message_loop({'chat': on_chat_message}, run_forever=True)
 
 
 while 1:
     time.sleep(10)
-#
