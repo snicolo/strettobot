@@ -5,11 +5,12 @@ import time
 import telepot
 from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove, ForceReply
+remove_keyboard = {'remove_keyboard': True}
 
 def on_chat_message(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print('Chat Message:', content_type, chat_type, chat_id)
-remove_keyboard = {'remove_keyboard': True}
+
     if msg['text']=='/start':
           bot.sendMessage(chat_id, 'Come vuoi viaggiare?',
                 reply_markup= ReplyKeyboardMarkup(
@@ -30,13 +31,13 @@ remove_keyboard = {'remove_keyboard': True}
                  
     #tratte aliscafi
     if msg['text'] == 'Reggio - Messina':
-          bot.sendMessage(chat_id, '\n'.join(file('aliscafo_reggio_messina.html')), parse_mode='HTML')
+          bot.sendMessage(chat_id, '\n'.join(file('aliscafo_reggio_messina.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
     elif msg['text'] == 'Messina - Reggio':
-          bot.sendMessage(chat_id, '\n'.join(file('aliscafo_messina_reggio.html')), parse_mode='HTML')
+          bot.sendMessage(chat_id, '\n'.join(file('aliscafo_messina_reggio.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
     elif msg['text'] == 'Villa - Messina':
-          bot.sendMessage(chat_id, '\n'.join(file('aliscafo_villa_messina.html')), parse_mode='HTML')
+          bot.sendMessage(chat_id, '\n'.join(file('aliscafo_villa_messina.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
     elif msg['text'] == 'Messina - Villa':
-          bot.sendMessage(chat_id, '\n'.join(file('aliscafo_messina_villa.html')), parse_mode='HTML')
+          bot.sendMessage(chat_id, '\n'.join(file('aliscafo_messina_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
           
      
     #caronte
@@ -59,9 +60,9 @@ remove_keyboard = {'remove_keyboard': True}
              )
     #tragitti per compagnia 1
     if msg['text'] in ['Messina - Villa S.G.', 'Caronte da Messina a Villa']:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_messina_villa.html')), parse_mode='HTML')
+           bot.sendMessage(chat_id, '\n'.join(file('caronte_messina_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
     elif msg['text'] in ['Villa S.G. - Messina', 'Caronte da Villa a Messina']:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_messina.html')), parse_mode='HTML')
+           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_messina.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
      
     if msg['text']== 'Bluferries':
            bot.sendMessage(chat_id, 'Scegli la tratta',
