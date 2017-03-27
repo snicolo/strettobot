@@ -1,11 +1,11 @@
-Lista comandi:
-
+﻿Lista comandi:
 /start 
-/caronte
+/traghetto
 /aliscafo
-
-Caronte 
-Aliscafo 
+Traghetto da Villa a Messina
+Traghetto da Messina a Villa
+Traghetto da Villa a Tremestieri
+Traghetto da Tremestieri a Villa 
 
 Disclaimer:
 Questo bot non è in alcun modo legato ai vettori menzionati in esso, gli stessi non sono responsabili di informazioni non corrette riportate qui.

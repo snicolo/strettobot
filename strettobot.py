@@ -60,9 +60,9 @@ def on_chat_message(msg):
              )
     #tragitti per compagnia 1
     if msg['text'] in ['Messina - Villa S.G.', 'Traghetto da Messina a Villa']:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_messina_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
+           bot.sendMessage(chat_id, '\n'.join(file('traghetto_messina_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
     elif msg['text'] in ['Villa S.G. - Messina', 'Traghetto da Villa a Messina']:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_messina.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
+           bot.sendMessage(chat_id, '\n'.join(file('traghetto_villa_messina.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
      
     if msg['text']== 'Bluferries':
            bot.sendMessage(chat_id, 'Scegli la tratta',
@@ -75,9 +75,9 @@ def on_chat_message(msg):
      #tragitti compagnia 2
 
     if msg['text'] in ['Villa S.G. - Tremestieri', 'Traghetto da Villa a Tremestieri' ]:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_tremestieri.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
+           bot.sendMessage(chat_id, '\n'.join(file('traghetto_villa_tremestieri.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
     elif msg['text'] in ['Tremestieri - Villa S.G.', 'Traghetto da Tremestieri a Villa']:
-           bot.sendMessage(chat_id, '\n'.join(file('caronte_tremestieri_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
+           bot.sendMessage(chat_id, '\n'.join(file('traghetto_tremestieri_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
 
     if msg['text']=='/help':
         bot.sendMessage(chat_id, '\n'.join(file('help.txt')))
