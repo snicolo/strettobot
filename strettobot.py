@@ -15,7 +15,7 @@ def on_chat_message(msg):
           bot.sendMessage(chat_id, 'Come vuoi viaggiare?',
                 reply_markup= ReplyKeyboardMarkup(
                     keyboard=[
-                        [KeyboardButton(text="Aliscafo"), KeyboardButton(text="Caronte")]
+                        [KeyboardButton(text="Aliscafo"), KeyboardButton(text="Traghetto")]
                     ]
                 ))
 
@@ -41,7 +41,7 @@ def on_chat_message(msg):
           
      
     #caronte
-    if msg['text'] in ['Caronte', '/caronte', 'caronte']:
+    if msg['text'] in ['Traghetto', '/traghetto', 'traghetto']:
             bot.sendMessage(chat_id, 'Scegli la compagnia',
                             reply_markup=ReplyKeyboardMarkup(
                                 keyboard=[
@@ -59,9 +59,9 @@ def on_chat_message(msg):
           )
              )
     #tragitti per compagnia 1
-    if msg['text'] in ['Messina - Villa S.G.', 'Caronte da Messina a Villa']:
+    if msg['text'] in ['Messina - Villa S.G.', 'Traghetto da Messina a Villa']:
            bot.sendMessage(chat_id, '\n'.join(file('caronte_messina_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
-    elif msg['text'] in ['Villa S.G. - Messina', 'Caronte da Villa a Messina']:
+    elif msg['text'] in ['Villa S.G. - Messina', 'Traghetto da Villa a Messina']:
            bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_messina.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
      
     if msg['text']== 'Bluferries':
@@ -74,9 +74,9 @@ def on_chat_message(msg):
      )
      #tragitti compagnia 2
 
-    if msg['text'] in ['Villa S.G. - Tremestieri', 'Caronte da Villa a Tremestieri' ]:
+    if msg['text'] in ['Villa S.G. - Tremestieri', 'Traghetto da Villa a Tremestieri' ]:
            bot.sendMessage(chat_id, '\n'.join(file('caronte_villa_tremestieri.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
-    elif msg['text'] in ['Tremestieri - Villa S.G.', 'Caronte da Tremestieri a Villa']:
+    elif msg['text'] in ['Tremestieri - Villa S.G.', 'Traghetto da Tremestieri a Villa']:
            bot.sendMessage(chat_id, '\n'.join(file('caronte_tremestieri_villa.html')), parse_mode='HTML', reply_to_message_id=None, reply_markup=remove_keyboard)
 
     if msg['text']=='/help':
